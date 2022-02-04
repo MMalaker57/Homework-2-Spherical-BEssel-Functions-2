@@ -17,6 +17,10 @@
 		522DF2EC27AB57D3009B33D9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522DF2C227AB57D0009B33D9 /* ContentView.swift */; };
 		522DF2ED27AB57D3009B33D9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 522DF2C327AB57D2009B33D9 /* Assets.xcassets */; };
 		522DF2EE27AB57D3009B33D9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 522DF2C327AB57D2009B33D9 /* Assets.xcassets */; };
+		522DF2FE27AB5804009B33D9 /* Bessel Function.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522DF2FD27AB5804009B33D9 /* Bessel Function.swift */; };
+		522DF2FF27AB5804009B33D9 /* Bessel Function.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522DF2FD27AB5804009B33D9 /* Bessel Function.swift */; };
+		522DF30027AB5804009B33D9 /* Bessel Function.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522DF2FD27AB5804009B33D9 /* Bessel Function.swift */; };
+		522DF30127AB5804009B33D9 /* Bessel Function.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522DF2FD27AB5804009B33D9 /* Bessel Function.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +53,7 @@
 		522DF2E127AB57D3009B33D9 /* Tests macOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests macOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		522DF2E527AB57D3009B33D9 /* Tests_macOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOS.swift; sourceTree = "<group>"; };
 		522DF2E727AB57D3009B33D9 /* Tests_macOSLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOSLaunchTests.swift; sourceTree = "<group>"; };
+		522DF2FD27AB5804009B33D9 /* Bessel Function.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bessel Function.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +104,7 @@
 			children = (
 				522DF2C127AB57D0009B33D9 /* Homework_2_Spherical_BEssel_Functions_2App.swift */,
 				522DF2C227AB57D0009B33D9 /* ContentView.swift */,
+				522DF2FD27AB5804009B33D9 /* Bessel Function.swift */,
 				522DF2C327AB57D2009B33D9 /* Assets.xcassets */,
 			);
 			path = Shared;
@@ -301,6 +307,7 @@
 			files = (
 				522DF2EB27AB57D3009B33D9 /* ContentView.swift in Sources */,
 				522DF2E927AB57D3009B33D9 /* Homework_2_Spherical_BEssel_Functions_2App.swift in Sources */,
+				522DF2FE27AB5804009B33D9 /* Bessel Function.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -310,6 +317,7 @@
 			files = (
 				522DF2EC27AB57D3009B33D9 /* ContentView.swift in Sources */,
 				522DF2EA27AB57D3009B33D9 /* Homework_2_Spherical_BEssel_Functions_2App.swift in Sources */,
+				522DF2FF27AB5804009B33D9 /* Bessel Function.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -319,6 +327,7 @@
 			files = (
 				522DF2DC27AB57D3009B33D9 /* Tests_iOSLaunchTests.swift in Sources */,
 				522DF2DA27AB57D3009B33D9 /* Tests_iOS.swift in Sources */,
+				522DF30027AB5804009B33D9 /* Bessel Function.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -328,6 +337,7 @@
 			files = (
 				522DF2E827AB57D3009B33D9 /* Tests_macOSLaunchTests.swift in Sources */,
 				522DF2E627AB57D3009B33D9 /* Tests_macOS.swift in Sources */,
+				522DF30127AB5804009B33D9 /* Bessel Function.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

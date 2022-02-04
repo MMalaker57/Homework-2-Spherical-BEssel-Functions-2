@@ -6,9 +6,63 @@
 //
 
 import XCTest
+import SwiftUI
 
 class Tests_macOS: XCTestCase {
-
+    @ObservedObject var bessel = Bessel_Function()
+    
+    func testBesselJ1(){
+        let x = 1
+        let testValue = (sin(x)/pow(x,2))-(cos(x)/x)
+        let functionValue = bessel.besselJ1(x: x)
+        XCTAssertEqual(testValue, functionValue, accuracy: 1.0e-7, "BesselJ1 Accuracy Failure.")
+    }
+    
+    func testBesselJ0(){
+        let x = 1
+        let testValue = sin(x)/x
+        let functionValue = bessel.besselJ0(x: x)
+        XCTAssertEqual(testValue, functionValue, accuracy: 1.0e-7, "BesselJ0 Accuracy Failure.")
+    }
+    
+    func testNeumannN1(){
+        let x = 1
+        let testValue = (-1*cos(x)/pow(x,2))-(sin(x)/x)
+        let functionValue = bessel.neumannN1(x: x)
+        XCTAssertEqual(testValue, functionValue, accuracy: 1.0e-7, "NeumannN1 Accuracy Failure.")
+        
+    }
+    func testNeumannN0(){
+        let x = 1
+        let testValue = -1*cos(x)/x
+        let functionValue = bessel.neumannN0(x: x)
+        XCTAssertEqual(testValue, functionValue, accuracy: 1.0e-7, "NeumannN1 Accuracy Failure.")
+        
+    }
+    
+    func testBesselJLPlusOne(){
+        
+        let x = 1
+        let testValue = ((((2*Double(l))+1)/x)*(Jl)-JlMinusOne)
+        let functionValue = bessel.BesselJLPlusOne(l: 1, x: x, Jl: bessel.besselJ1(x: x), JlMinusOne: bessel.besselJ0(x: x))
+        XCTAssertEqual(testValue, functionValue, accuracy: 1.0e-7, "BesselJ+1 Accuracy Failure.")
+        
+    }
+    
+    func testBesselBesselJLMinusOne(){
+        let x = 1
+        let testValue = (((((2*Double(l))+1)/x)*Jl)-JlPlusOne)
+        let functionValue = bessel.BesselJMinusOne(l: 1, x: x, Jl: bessel.besselJ1(x: x), JlPlusOne: bessel.BesselJLPlusOne(l: 1, x: x, Jl: bessel.besselJ1(x: x), JlMinusOne: bessel.besselJ0(x: x)))
+        XCTAssertEqual(testValue, functionValue, accuracy: 1.0e-7, "BesselJ-1 Accuracy Failure.")
+    }
+    
+    func testBesselJUpwardRecursion(){
+        
+    }
+    
+    func testBesselJDownwardRecursion(){
+        
+    }
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
 
